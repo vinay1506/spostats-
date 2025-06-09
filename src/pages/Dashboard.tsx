@@ -183,29 +183,8 @@ const Dashboard = () => {
       <header className="sticky top-0 z-50 bg-[#121212] border-b border-[#535353]">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-3">
-              {/* Spotify-like logo */}
-              <div className="relative h-8 w-8">
-                <div className="absolute inset-0 bg-[#1db954] rounded-full" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-4 h-4 bg-[#121212] rounded-full" />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-2 h-2 bg-[#1db954] rounded-full" />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-6 h-6 border-2 border-[#121212] rounded-full" />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-5 h-5 border-2 border-[#121212] rounded-full" />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-4 h-4 border-2 border-[#121212] rounded-full" />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-3 h-3 border-2 border-[#121212] rounded-full" />
-                </div>
-              </div>
+            <div className="flex items-center space-x-2">
+              <Music2 className="h-8 w-8 text-[#1db954]" />
               <h1 className="text-2xl font-bold text-white tracking-tight">
                 Spostats
               </h1>
