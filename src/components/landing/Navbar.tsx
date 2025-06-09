@@ -1,7 +1,7 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Music } from 'lucide-react';
+import { spotifyService } from '@/lib/spotify';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,10 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
             <a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a>
-            <Button className="bg-green-500 hover:bg-green-600 text-black font-semibold">
+            <Button 
+              className="bg-green-500 hover:bg-green-600 text-black font-semibold"
+              onClick={() => spotifyService.login()}
+            >
               Connect Spotify
             </Button>
           </div>
@@ -38,7 +41,10 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4 pt-4">
               <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
               <a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a>
-              <Button className="bg-green-500 hover:bg-green-600 text-black font-semibold w-fit">
+              <Button 
+                className="bg-green-500 hover:bg-green-600 text-black font-semibold w-fit"
+                onClick={() => spotifyService.login()}
+              >
                 Connect Spotify
               </Button>
             </div>

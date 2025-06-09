@@ -1,27 +1,32 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from '@/components/landing/Navbar';
+import Hero from '@/components/landing/Hero';
+import Features from '@/components/landing/Features';
+import Testimonials from '@/components/landing/Testimonials';
+import Footer from '@/components/landing/Footer';
+import Dashboard from '@/pages/Dashboard';
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={
+            <>
+              <Navbar />
+              <main>
+                <Hero />
+                <Features />
+                <Testimonials />
+              </main>
+              <Footer />
+            </>
+          } />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+      </div>
+    </Router>
+  );
+}
 
 export default App;
