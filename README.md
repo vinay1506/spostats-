@@ -160,5 +160,5 @@ If you have any questions or need help, please:
 ---
 
 <div align="center">
-Made with ❤️ by [Your Name]
+Made with ❤️ by vinay
 </div>
